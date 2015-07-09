@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -29,9 +29,6 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
 	</head>
 
 	<body>
@@ -42,24 +39,63 @@
 			<div class="slides">
 				<section>
 					<h1>Beautiful REST-APIs</h1>
-					<h3>From design to final implementation with Swagger </h3>
+					<br>
+					<hr>
+					<br>
+					<h3>From design to implementation with Swagger </h3>
+					<br>
+					<br>
 					<p>
-						<small>Created by <a href="http://hakim.se">David Dornseifer</a> / <a href="http://twitter.com/dp_dornseifer">@dp_dornseifer</a></small>
+						<small>Created by <a href="www.linkedin.com/in/daviddornseifer">David Dornseifer</a> / <a href="http://twitter.com/dp_dornseifer">@dp_dornseifer</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>REST-APIs</h2>
-					<h3>What is the purpose of public REST-APIs - go get the developer community attracted to your app/plattform/data</h3>
+					<section>
+						<h2>REST-APIs</h2>
+					</section>
+					<!--
+					<section>
+						<h2>Purpose, expectations of public REST-APIs</h2ß>
+					</section>
+					-->
+					<section>
+						<h2>What do developers expect</h2>
+						<br>
+						<ul>
+							<li>easy to use</li>
+							<li>documentation</li>
+							<li>playground (browser / curl)</li>
+						</ul>
+
+					</section>
+
+					<section>
+						<h2>What do I expect</h2>
+						<br>
+						<ul>
+							<li>people build cool stuff</li>
+							<li>gets famous in the community</li>
+							<li>people recommend to use it</li>
+						</ul>
+					</section>
+
 				</section>
 
 				<!-- Rest - Accidents / Not to do -->
-				<section>	
+				<section>
 					<section data-transition="slide" data-background="#b5533c">
 						<h2>API-Accidents</h2>
-						
-												
+						<br>
+						<ul>
+							<li>Exposing of operations instead of objects</li>
+							<li>Response has HTML fragments</li>
+							<li><a href="http://vincentwoo.com/2012/08/15/the-api-for-googles-most-valuable-resource-sucks/">Google API</a></li>
+						</ul>
 					</section>
+
+
+					<!--
 					<section>
 						<h2>Query-Parameters</h2>
 						<h3>API cannot be read/interpreted that easy anymore</h3>
@@ -68,280 +104,230 @@
 						<h2>Header-Parameter</h2>
 						<p>Developers cannot just use `curl` or their browser to test `GET-Requests`</p>
 					</section>
+				-->
+					<section data-background="http://i.giphy.com/kwQfk9zUJ6eVq.gif">
+						<p class="fragment">Gif taken from giphy.com</p>
+					</section>
 
 				</section>
 
-				
+
 				<!-- Rest - Best Practices -->
-				<section>	
+				<section>
 					<section data-transition="slide" data-background="#4d7e65">
-						<h2>API-Design Best Practices</h2>	
+						<h2>What is good API-Design</h2>
 					</section>
 
 					<section>
-						<h2>Versioning</h2>
-
-					</section>	
+						<h2>Naming</h2>
+						<br>
+						<ul>
+							<li>Nouns, non verbs</li>
+							<li>Plural nouns for collections</li>
+							<li>/beers.json/{beerId}</li>
+						</ul>
+					</section>
 
 					<section>
 						<h2>HTTP-Verbs</h2>
-						
+						<br>
+						<table>
+							<thead>
+								<tr>
+									<th>Method</th>
+									<th>Scope</th>
+									<th>Semantics</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>GET</td>
+									<td>collection</td>
+									<td>Retrieve all resources in a collection</td>
+								<tr>
+								<tr>
+									<td>GET</td>
+									<td>resource</td>
+									<td>Retrieve a single resource</td>
+								<tr>
+								<tr>
+									<td>POST</td>
+									<td>collection</td>
+									<td>Create a new resource in a collection</td>
+								<tr>
+								<tr>
+									<td>PUT</td>
+									<td>resource</td>
+									<td>Update a resource</td>
+								</tr>
+								<tr>
+									<td>DELETE</td>
+									<td>resource</td>
+									<td>Delete a recource</td>
+								</tr>
+							</tbody>
+						</table>
+
 					</section>
 
 					<section>
-						<h2>REST-Endpoints</h2>
-					</section>
-
-					<section>
-						<h2> ... </h2>
-					</section>
-				</section>	
-				
-
-				<!-- Swagger section -->
-				<section>
-				
-					<section>
-						<h2>Swagger</h2>
-						<h3>OpenSource REST-Spec Framework - Design driven approach</h3>
-					</section>	
-
-					<section>
-						<h2>Swagger-Editor
-						<h3>Node based realtime editor 		
-					</section>
-
-					<section>
-						<h2>Swagger-UI</h2>
-						<h3>API-Console, to play around with the APIs</h3>
-					</section>
-
-					<section>
-						<h2>Code annotations</h2>
-					</section>
-
-					<section>
-						<h2></h2>
-					</section>
-				</section>
-						
-				<!-- Demo Section -->
-				<section>
-					<h2>Demo</h2>
-
-				</section>	
-				
-
-				<!--
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section>
-					<section id="fragments">
-						<h2>Fragments</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<p><span class="fragment">... a</span> <span class="fragment">fragmented</span> <span class="fragment">slide.</span></p>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's different types of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment current-visible">current-visible</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
-				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code>Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
-
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
+						<h2>Errors</h2>
+						<br>
 					<table>
 						<thead>
 							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
+								<th>Code</th>
+								<th>Semantics</th>
 							</tr>
 						</thead>
 						<tbody>
 							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
+								<td>200</td>
+								<td>Success, everything worked</td>
 							<tr>
 							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
+								<td>400</td>
+								<td>App did something wrong, client error</td>
+							</tr>
 							<tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							<tr>
+								<td>500</td>
+								<td>API did something wrong, server error</td>
+							</tr>
 						</tbody>
 					</table>
-				</section>
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
+					<br>
+					<br>
+					Possible: 201 - Created , 304 - Not Modified, 404 - Not Found, 401 - Unauthorized, 403 - Forbidden
+					</section>
+
+					<section>
+						<h2>Versioning</h2>
+						<br>
+						<ul>
+							<li>Keep old versions active for smooth transition</li>
+							<li>API should not change frequently, no /v10.2</li>
+							<li>www.host.com/api/v1/beer</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Pagination</h2>
+						<br>
+						<ul>
+							<li>Use Query-Parameter</li>
+							<li>Have default values in place (?limit=10&offset=10)</li>
+							<li>?limit=10</li>
+							<li>?offset=20</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Partial Response</h2>
+						<br>
+						<ul>
+							<li>Use query parameters for fields</li>
+							<li>Have a default list in place (PK)</li>
+							<li>?fields=beerId,displayName,stock</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Formats</h2>
+						<br>
+						<ul>
+							<li>Support more than one response formats</li>
+							<li>Define it like a filename extension</li>
+							<li>/pets.json</li>
+							<li>/pets.xml</li>
+							<li>/pets.odata</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Attributs/Naming conventions</h2>
+						<br>
+						<ul>
+							<li>Consistent over all APIs</li>
+							<li>sanke_case vs. camelCase</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Search</h2>
+						<br>
+						<ul>
+							<li>'/beer.json?q=ipa' for specific enpoint</li>
+							<li>'/search.json?q=beer' for global domain search</li>
+						</ul>
+					</section>
+
+					<section data-background="http://i.giphy.com/eoxomXXVL2S0E.gif">
+						<p class="fragment">Gif taken from giphy.com</p>
+					</section>
+
+					<section>
+						<h2>Sources</h2>
+						<ul>
+							<li><a href="https://pages.apigee.com/rs/apigee/images/api-design-ebook-2012-03.pdf">Web API Design by apigee</a></li>
+							<li><a href="http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">Best Practices for API Design</a></li>
+						</ul>
+					</section>
+
+
 				</section>
 
-				
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
 
+				<!-- Swagger section -->
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-				-->
+
+					<section>
+						<h2>Swagger</h2>
+						<ul>
+							<li>OpenSource REST-Spec Framework like RAML, API-Blueprint</li>
+							<li>Strong developer community on GitHub</li>
+							<li>Tool and language support</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>API-Design with Swagger</h2>
+						<ol>
+							<li>Design/model driven approach</li>
+							<li>Annotate exsisting Rest-APIs</li>
+						</ol>
+					</section>
+
+
+					<section>
+						<h2>Model driven Approach</h2>
+						<ol>
+							<li>Use <a href="http://localhost:8080">Swagger Editor</a> to define REST-APIs</li>
+							<li>Generate server or client stubs with <a href="https://github.com/swagger-api/swagger-codegen/blob/develop_2.0/README.md#to-generate-a-sample-client-library">Swagger Codegen</a></li>
+							<li>Implement API - Do the magic :)</li>
+							<li>Use <a href="http://petstore.swagger.io/">Swagger UI</a> as API-Console</li>
+						</ol>
+					</section>
+
+					<section>
+						<h2>Swagger-Annotations</h2>
+						<ul>
+							<li>Annotate REST-API source code with Swagger @nnotations</li>
+							<li>Build tool generates swagger.json/.yaml with Swagger Core libraies</li>
+							<li>Use Swagger-UI as API-Console</li>
+						</ul>
+					</section>
+
+
 				<section style="text-align: left;">
 					<h1>THE END</h1>
-					<p>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-						- <a href="http://swagger.io/">SWAGGER</a>
-						- <a href="https://github.com/david">Slides</a>
-					</p>
+
+					<ul>
+						<li><a href="http://swagger.io/">SWAGGER</a></li>
+						<li><a href="https://github.com/hakimel/reveal.js/">reveal.js</a></li>
+						<li><a href="https://github.com/david">Slides on GitHub</a></li>
+					</ul>
 				</section>
-			
+
 			</div>
 
 		</div>
@@ -354,10 +340,11 @@ Reveal.addEventListener( 'customevent', function() {
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
+				controls: false,
 				progress: true,
 				history: true,
-				center: true,
+				center: false,
+				previewLinks: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
 
